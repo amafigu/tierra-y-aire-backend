@@ -18,7 +18,7 @@ export const typeDefs = gql`
 
   type Mutation {
     addConcert(
-     venue: String!
+    venue: String!
     venueLink: String!
     city: String!
     country: String!
