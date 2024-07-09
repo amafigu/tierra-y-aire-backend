@@ -1,23 +1,14 @@
 {
-    "development": {
-      "username": "postgres",
-      "password": null,
-      "database": "tierrayaire",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    },
-    "test": {
-      "username": "postgres",
-      "password": null,
-      "database": "tierrayairetest",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    },
-    "production": {
-      "username": "postgres",
-      "password": null,
-      "database": "tierrayaire",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    }
+  "development": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres"
+  },
+  "test": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres"
   }
+}
