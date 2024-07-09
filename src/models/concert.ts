@@ -1,54 +1,52 @@
-import { Column, DataType, Model, Table } from 'sequelize-typescript'
+import { Column, DataType, Model, Table } from 'sequelize-typescript';
 
 @Table({
   tableName: 'concerts',
-  timestamps: true
+  timestamps: true,
 })
-
 class Concert extends Model {
   @Column({
     type: DataType.INTEGER,
     primaryKey: true,
-    autoIncrement: true
+    autoIncrement: true,
   })
-  public id!: number
+  public id!: number;
 
   @Column({
     type: DataType.STRING,
-    allowNull: false
+    allowNull: false,
   })
-  public venue!: string
+  public venue!: string;
 
   @Column({
     type: DataType.STRING,
-    allowNull: false
+    allowNull: false,
   })
-  public venueLink!: string
+  public venueLink!: string;
 
   @Column({
     type: DataType.STRING,
-    allowNull: false
+    allowNull: false,
   })
-  public city!: string
+  public city!: string;
 
   @Column({
     type: DataType.STRING,
-    allowNull: false
+    allowNull: false,
   })
-  public country!: string
+  public country!: string;
 
   @Column({
     type: DataType.STRING,
-    allowNull: false
+    allowNull: false,
   })
-  public ticketsLink!: string
+  public ticketsLink!: string;
 
   @Column({
     type: DataType.DATE,
-    allowNull: false
+    allowNull: false,
   })
-  public concertDate!: Date
-
+  public concertDate!: Date;
 }
 
-export default Concert
+export default Concert;
