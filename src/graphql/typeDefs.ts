@@ -11,7 +11,7 @@ export const typeDefs = gql`
     concertDate: String!
   }
 
-   input CreateConcertInput {
+  input CreateConcertInput {
     venue: String!
     venueLink: String!
     city: String!
@@ -19,21 +19,14 @@ export const typeDefs = gql`
     ticketsLink: String!
     concertDate: String!
   }
-    
+
   type Query {
     getConcerts: [Concert]
     getConcertById(id: ID!): Concert
   }
 
   type Mutation {
-    addConcert(
-      venue: String!
-      venueLink: String!
-      city: String!
-      country: String!
-      ticketsLink: String!
-      concertDate: String!
-    ): CreateConcert
-    deleteConcert(id: ID!)
+    addConcert(input: CreateConcertInput!): Concert
+    deleteConcert(id: ID!): Boolean
   }
 `;
