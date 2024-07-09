@@ -7,7 +7,7 @@ describe('Resolvers', () => {
   beforeAll(async () => {
     try {
       await db.sequelize.authenticate();
-      execSync('NODE_ENV=test npx sequelize-cli db:migrate', {
+      execSync('NODE_ENV=development npx sequelize-cli db:migrate', {
         stdio: 'inherit',
       });
     } catch (error) {
