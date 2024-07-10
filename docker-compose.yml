@@ -1,5 +1,6 @@
 services:
   app:
+    container_name: tierra-y-aire-backend
     build:
       context: .
       dockerfile: Dockerfile
