@@ -99,3 +99,9 @@ export const seed = async () => {
 };
 
 export default seed;
+
+if (require.main === module) {
+  seed().catch((err) => {
+    console.error(err);
+  });
+}
