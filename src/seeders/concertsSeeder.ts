@@ -75,6 +75,14 @@ const concerts: CreateConcert[] = [
     ticketsLink: 'https://www.instagram.com/galpon11rosario/',
     concertDate: new Date('2024-04-05'),
   },
+  {
+    venue: 'Galpon 11',
+    venueLink: 'https://www.instagram.com/galpon11rosario/',
+    city: 'Rosario',
+    country: 'Argentina',
+    ticketsLink: 'https://api.whatsapp.com/send?phone=5493413425820',
+    concertDate: new Date('2024-08-10'),
+  },
 ];
 
 export const seed = async () => {
@@ -99,3 +107,9 @@ export const seed = async () => {
 };
 
 export default seed;
+
+if (require.main === module) {
+  seed().catch((err) => {
+    console.error(err);
+  });
+}
